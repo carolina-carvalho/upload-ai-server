@@ -1,8 +1,8 @@
 import { FastifyInstance } from "fastify";
 import { z } from "zod";
 import { streamToResponse, OpenAIStream } from 'ai'
-import { prisma } from "../lib/prisma";
-import { openai } from "../lib/openai";
+import { prisma } from "../../lib/prisma";
+import { openai } from "../../lib/openai";
 
 export async function generateAiCompletionRoute(app: FastifyInstance) {
   app.post('/ai/complete', async (req, reply) => {
